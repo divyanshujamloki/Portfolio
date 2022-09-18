@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divyanshu's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#about-me">About Me</a><a href="#qualifications">Qualifications</a><a href="#hobbies">Hobbies</a><a href="#technologies">Technologies</a><a href="#contact-me">Contact</a>
+      </nav>
+    </header>
+    <main class="container">
+      <article class="intro">
+        <img id="profile-image" src="divyanshu.jpg"  alt="Profile image - Divyanshu Jamloki" />
+        <h1>Hello, I'm Divyanshu Jamloki</h1>
+        <p>I am a <span id="dynamic-text" class="dynamic-text-color"></span></p>
+        <p class="social-links">
+          <a href="http://surl.li/dbceo" target="_blank">
+            <img width="30" height="30" src="https://cdn.pixabay.com/photo/2013/07/12/19/25/github-154769__340.png" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/divyanshu-jamloki-2a7789250/" target="_blank">
+            <img width="30" height="30" src="https://www.iconpacks.net/icons/1/free-icon-linkedin-130.png" alt="" /> </a
+          ><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">
+            <img
+              width="30"
+              height="30"
+              src="https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png"
+              alt=""
+            />
+          </a>
+        </p>
+      </article>
+      <section id="about-me">
+        <h2 >About Me</h2>
+        <p  >A computer science  Engineer by profession with a couple of years experience in Programing.</p>
+        <p>In 2020 I started coding as a hobby. A way to earn a passive joy.</p>
+
+        <p>
+          After receiving positive feedback from a large number of people, I took it up more actively. It gives me
+          immense joy to see myself grow succeed and grow with the skills that I've learn .
+        </p>
+
+        <p>
+          This website is an attempt to share my knowledge and experience. I'm willing to share my knowledge and
+          experience with you. Are you willing to learn?
+        </p>
+      </section>
+
+      <section id="qualifications">
+        <h2>Qualifications</h2>
+        <table>
+          <tr>
+            <th>Period</th>
+            <th>Institution/ Board</th>
+            <th>Degree/ course</th>
+            <th>Marks/ grades</th>
+          
+          </tr>
+          <tr>
+            <td>2020-Now</td>
+            <td>krishna engineering college</td>
+            <td>B.Tech(CSE)</td>
+            <td>CGPA 8.3 upto 4th semester</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>Central Board of Secondary Education</td>
+            <td>XII </td>
+            <td>91% </td>
+          </tr>
+          <tr>
+            
+            <td>2018</td>
+            <td>Central Board of Secondary Education</td>
+            <td>X </td>
+            <td>86% </td></tr>
+        </table>
+      </section>
+      <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Programing</li>
+          <li>Listening to Music</li>
+          <li>Anime Drawing</li>
+        </ul>
+      </section>
+      <section id="technologies">
+        <h2>Technologies</h2>
+        <table align="center">
+          <tr>
+            <th>S.NO</th>
+            <th>Course Name</th>
+            <th>Value</th>
+            <th>DURATION</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>UDEMY</td>
+            <td>C++</td>
+            <td>2 month</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>E&ICT(IIT kanpur) </td>
+            <td>PYHTON </td>
+            <td>5 month </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>INTERNSAHAL</td>
+            <td>WEB DEVELOPMENT</td>
+            <td>8 week </td>
+          </tr>
+        </table>
+      </section>
+    </section>
+    <section id="contact-me">
+      <form name="contact" id="contact" method="POST" data-netlify="true">
+        <h1>Contact Me</h1>
+        <section>
+          <label for="firstName">First name</label>
+          <input type="text" name="firstName" id="firstName" required />
+        </section>
+        <section>
+          <label for="lastName">Last name</label>
+          <input type="text" name="lastName" id="lastName" required />
+        </section>
+        <section>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"> </textarea>
+        </section>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    </main>
+    <footer>
+      Made by Divyanshu Jamloki Copyright ©2022
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
