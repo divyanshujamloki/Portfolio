@@ -13,20 +13,37 @@ body {
 
 
 header {
-  padding: 16px;
+  padding: 15px;
   position: sticky;
   top: 0;
   border: 1px solid white;
   background: hsl(0, 0%, 100%);
   border-bottom: 2px solid;
 }
+
+nav a {
+  text-decoration: none;
+  color: royalblue;
+}
+
 header nav > a {
   margin: 10px;
+  margin-right: 16px;
   text-decoration: none;
   padding: 8px;
 }
+
+header nav > a:last-child {
+  margin-right: revert;
+
+}
+
 header nav > a:hover {
   text-decoration: underline;
+}
+
+nav a:visited {
+  color: royalblue;
 }
 
 footer {
@@ -53,7 +70,7 @@ footer {
 #profile-image {
   height: 500px;
   width: 400px;
-  border-radius: 16px;
+  border-radius: 26px;
 }
 
 .social-links img {
@@ -66,10 +83,17 @@ footer {
   margin: auto 16px;
 }
 #about-me{
-  font-size: small;
+  font-size: large;
   text-align: center;
 }
-
+#hobbies ul>li {
+  padding: 5px;
+  font-weight: 530;
+  margin: auto;
+  text-align: center;
+  font-size: large;
+list-style-type: none;
+}
 
 table,
 tr,
@@ -77,21 +101,13 @@ td,
 th {
   border: 1px solid;
   border-collapse: collapse;
+  margin: auto;
 }
 th,
 td {
   padding: 8px;
 }
-
-#qualifications table
-{
-  text-align: center;
-  align-items: center;
-  align-self: center;
-  margin: auto;
-}
-
-        
+    
 p {
   font-size: 1.5rem;
   
@@ -100,6 +116,8 @@ p {
 .dynamic-text-color {
   color: royalblue;
 }
+
+
 
 form#contact {
   max-width: 400px;
@@ -124,3 +142,63 @@ form#contact {
   margin-top: 16px;
 }
 
+.mobile-nav,
+section.menu {
+  display: none;
+}
+
+@media (width<=600px) {
+  .default-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: revert;
+  }
+
+#menu-button{
+display:block;
+background: transparent;
+border-radius: 9px;
+margin-left: auto;
+}
+
+section.menu {
+  display: revert;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: hsl(0, 0%, 100%);
+  transition: height 0.8s ease-in-out;
+}
+
+section.menu ul {
+  list-style: none;
+}
+section.menu ul > li {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+section.menu nav {
+  margin-top: 48px;
+}
+
+
+#close-menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: transparent;
+  font-size: x-large;
+  border: none;
+}
+}
+
+@media (width<=400px )  {
+  
+    #profile-image{
+    width: 100%;
+  }
+}
