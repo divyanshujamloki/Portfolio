@@ -2,28 +2,52 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   scroll-behavior: smooth;
+  --background-color: hsl(240deg, 80%, 100%);
+  --secondary-color: hsl(225deg 13% 24%);
+  --text-color: rgb(32, 32, 56);
+  --intro-color: hsl(0, 0%, 85%);
+  /* --secondary-color: hsl(225, 85%, 57%); */
+
+
+  --font-size-small: 0.5rem;
+  --font-size-regular: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2rem;
+
+  --box-shadow-contact: inset 4px 3px 13px 2px;
+  --box-shadow-button: 4px 4px 14px 4px;
+   --box-shadow-icon: 0px 5px 12px 3px #083054;
+
+  --box-shadow-contact: inset 4px 3px 13px 2px;
+  --spacing-regular: 16px;
+  --spacing-small: calc(var(--spacing-regular) / 2);
+
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--font-size-large);
 }
 
 
 header {
-  padding: 15px;
+  padding: 14px;
   position: sticky;
   top: 0;
-  border: 1px solid white;
-  background: hsl(0, 0%, 100%);
-  border-bottom: 2px solid;
+  z-index: 1;
+  background:var(--background-color);
+  border: 1px solid var(--secondary-color);
 }
 
 nav a {
   text-decoration: none;
-  color: royalblue;
+  color: inherit;
+  font-size:  var(--font-size-regular);
 }
 
 header nav > a {
@@ -33,17 +57,27 @@ header nav > a {
   padding: 8px;
 }
 
+header nav > a {
+  margin-right: 16px;
+}
+
 header nav > a:last-child {
   margin-right: revert;
 
 }
 
-header nav > a:hover {
-  text-decoration: underline;
+section {
+  scroll-margin-top: calc(100px - (2 * var(--spacing-regular)));
 }
 
+nav a:hover,
+nav a:visited:hover {
+  color: var(--secondary-color);
+}
+
+
 nav a:visited {
-  color: royalblue;
+  color: inherit;
 }
 
 footer {
@@ -62,7 +96,7 @@ footer {
 .intro {
   margin: -16px;
   padding: 16px;
-  background-color: #8aa7ae;
+  background-color: var(--intro-color);
   color: white;
   text-align: center;
 }
@@ -71,11 +105,17 @@ footer {
   height: 500px;
   width: 400px;
   border-radius: 26px;
+  filter: drop-shadow(8px 4px 20px gray );
+}
+#hello{
+  
+  text-shadow: 10px 10px 8px #0f0f0f;
 }
 
 .social-links img {
   height: 20px;
   width: 20px;
+  box-shadow:var(--box-shadow-icon);
 }
 
 .social-links a {
@@ -83,17 +123,10 @@ footer {
   margin: auto 16px;
 }
 #about-me{
-  font-size: large;
+  font-size: var(--font-size-large);
   text-align: center;
 }
-#hobbies ul>li {
-  padding: 5px;
-  font-weight: 530;
-  margin: auto;
-  text-align: center;
-  font-size: large;
-list-style-type: none;
-}
+
 
 table,
 tr,
@@ -125,11 +158,13 @@ form#contact {
   padding: 16px;
   border: 1px solid;
   border-radius: 16px;
+  box-shadow: 10px 6px 20px 4px var(--secondary-color);
 }
 
 #contact label {
   display: block;
   font-weight: 600;
+  font-size: var(--font-size-regular);
 }
 #contact input,
 #contact textarea,
@@ -137,9 +172,15 @@ form#contact {
   width: 100%;
   font-size: 1.2rem;
   padding: 8px;
+  box-shadow: var(--box-shadow-contact);
 }
-#contact-me {
-  margin-top: 16px;
+#contact button {
+  box-shadow:var(--box-shadow-button);
+
+}
+
+  #contact-me {
+  margin-top: 20px;
 }
 
 .mobile-nav,
@@ -157,9 +198,12 @@ section.menu {
 
 #menu-button{
 display:block;
-background: transparent;
 border-radius: 9px;
 margin-left: auto;
+box-shadow: var(--box-shadow-button);
+background: var(--background-color);
+color: var(--text-color);
+border-color: var(--text-color);
 }
 
 section.menu {
@@ -169,9 +213,10 @@ section.menu {
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 1;
-  background: hsl(0, 0%, 100%);
+  background-color: var(--background-color);
+  z-index: 2;;
   transition: height 0.8s ease-in-out;
+ 
 }
 
 section.menu ul {
@@ -184,15 +229,21 @@ section.menu ul > li {
 section.menu nav {
   margin-top: 48px;
 }
+section.menu nav a {
+  margin-top: 48px;
+  font-size: var(--font-size-large);
+}
 
 
 #close-menu {
   position: absolute;
-  right: 16px;
+  right: 20px;
   top: 16px;
   background: transparent;
-  font-size: x-large;
+  color: var( --text-color);
+  font-size: var(--font-size-xl);
   border: none;
+  
 }
 }
 
@@ -201,4 +252,49 @@ section.menu nav {
     #profile-image{
     width: 100%;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --background-color: hsl(240deg, 80%, 4%);
+    --text-color: hsl(240deg 95% 100%);
+    --intro-color: hsl(0, 0%, 19%);
+    --box-shadow-contact: inset 4px 3px 13px 2px #790de3;
+    --box-shadow-button:0px 8px 6px #19d0e0;
+     --box-shadow-icon: 2px 2px 8px 4px #fe10c7;
+     --secondary-color:hsl(111deg 93% 52%);
+     
+  }
+}
+
+#hobbies{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-regular);
+  justify-content: center;
+  justify-items: center; 
+}
+.card {
+  border: 1px solid white;
+  padding: var(--spacing-regular);
+  box-shadow: 2px 2px 5px 2px  var(--secondary-color);
+  width: 100%;
+  border-radius: var(--spacing-regular);
+  z-index: 0;
+  transition: transform 0.2s ease-in, box-shadow 0.4s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 9px 9px var(--secondary-color);
+  transform: translateY(calc(-1 * var(--spacing-small)));
+}
+
+
+.card ul {
+  list-style: none;
+  padding: 0;
+
+}
+.card header h1 {
+  text-align: center;
 }
