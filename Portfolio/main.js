@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 updatedPhrase += phrases[pharseIndex].charAt(index);
 
             }
-            console.log(updatedPhrase);
+           // console.log(updatedPhrase);
             dynamicContent.textContent = updatedPhrase;
             letterIndex -= 1;
             setTimeout(clearLetters, erasingSpeed)

@@ -34,6 +34,16 @@ body {
   font-size: var(--font-size-large);
 }
 
+body.dark-theme{
+  --background-color: hsl(240deg, 80%, 4%);
+  --text-color: hsl(240deg 95% 100%);
+  --intro-color: hsl(0, 0%, 19%);
+  --box-shadow-contact: inset 4px 3px 13px 2px #790de3;
+  --box-shadow-button:0px 8px 6px #19d0e0;
+   --box-shadow-icon: 2px 2px 8px 4px #fe10c7;
+   --secondary-color:hsl(111deg 93% 52%);
+   
+}
 
 header {
   padding: 14px;
@@ -44,24 +54,29 @@ header {
   border: 1px solid var(--secondary-color);
 }
 
+.default-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav a {
   text-decoration: none;
   color: inherit;
   font-size:  var(--font-size-regular);
 }
 
-header nav > a {
+header nav  a {
   margin: 10px;
   margin-right: 16px;
   text-decoration: none;
   padding: 8px;
 }
 
-header nav > a {
+header nav  a {
   margin-right: 16px;
 }
 
-header nav > a:last-child {
+header nav  a:last-child {
   margin-right: revert;
 
 }
@@ -264,6 +279,13 @@ section.menu nav a {
      --box-shadow-icon: 2px 2px 8px 4px #fe10c7;
      --secondary-color:hsl(111deg 93% 52%);
      
+  }
+  body.light-theme {
+    
+    --background-color: hsl(240deg, 80%, 100%);
+    /* --secondary-color: hsl(225deg 13% 24%); */
+    --text-color: rgb(32, 32, 56);
+    --intro-color: hsl(0, 0%, 85%);
   }
 }
 
